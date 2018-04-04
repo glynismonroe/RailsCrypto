@@ -1,0 +1,17 @@
+<h1>Crypto World!</h1>
+<p> This is my first rails crypto app!</p>
+
+
+
+<% @coins %>
+
+<% for x in @coins %>
+    <% for coin in @my_coins %> 
+        <% if coin == x["symbol"] %>
+            <%= x["name"] %>: $<%= x["price_usd"] %><br/>
+            Rank: <%= x["rank"] %><br/><br/>
+        <% end %>
+    <% end %>
+<% end %> 
+
+<br/>
